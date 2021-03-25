@@ -1,21 +1,48 @@
 {
   "name": "kronus",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1"
+  "version": "0.0.1",
+  "description": "Minimally designed and structured component framework to run projects quickly, easily and highly configurable",
+  "authors": [
+    "Grupo Abraxas",
+    "Giovanni Mendoza",
+    "Magaly Ledesma"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Grupo-Abraxas/kronus.git"
+  },
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=10"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "clean": "rm -rf dist",
+    "prepare-build": "npm run clean && NODE_ENV=production babel src/components --out-dir dist --extensions \".js,.jsx\" --ignore 'src/components/**/*.test.js'",
+    "copy": "cp package.json dist/ && cp README.md dist/ && cp -r src/components/scss/ dist/",
+    "build": "npm run prepare-build && npm run copy"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.10",
+    "@babel/preset-env": "^7.13.12",
+    "@babel/preset-react": "^7.12.13",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^13.0.13",
+    "@types/jest": "^26.0.21",
+    "@types/node": "^14.14.35",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "sass": "^1.32.8"
+  },
+  "directories": {
+    "components": "components"
   },
   "eslintConfig": {
     "extends": [
