@@ -5,7 +5,7 @@ import { Button } from '../components'
 
 describe('it should test Button component', () => {
   test('it should show a text passed as param', () => {
-    const text = "Ejemplo de botón"
+    const text = "Button example"
     render(<Button>{ text }</Button>)
     expect(screen.getByText(text))
   })
