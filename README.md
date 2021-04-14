@@ -2,28 +2,43 @@
 
 > Minimally designed and structured component framework to run projects quickly, easily and highly configurable
 
-[![NPM](https://img.shields.io/npm/v/kronus.svg)](https://www.npmjs.com/package/kronus) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/kronus.svg)](https://www.npmjs.com/package/kronus)
 
-## Available Scripts
 
-In the project directory, you can run:
 
-#### `yarn start`
+## Documentation
 
-Runs the app in the development mode.\
-Open `http://localhost:3000` to view it in the browser.
+Currently the project is starting, so, the documentation is pending.
 
-#### `yarn test`
 
-Launches the test runner in the interactive watch mode.
 
-## Usage
+## To use in your project
 
-#### `yarn add kronus`
+#### Install
+
+```shell
+npm install kronus
+```
+
+or
+
+```shell
+yarn add kronus
+```
+
+#### In your main SCSS file
+
+```scss
+@import "~kronus/scss/kronus";
+```
+
+#### Importing and using
 
 ```jsx
 import React from 'react'
 import { Button } from 'kronus'
+// or import it by component
+import Button from 'kronus/Button'
 
 const Example = () => {
   render() {
@@ -35,6 +50,16 @@ const Example = () => {
 
 export default Example
 ```
+
+
+
+## Available scripts
+
+##### `npm start`
+##### `npm run test`
+##### `npm run build`
+
+
 
 ## License
 
