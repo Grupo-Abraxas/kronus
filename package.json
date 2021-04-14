@@ -44,6 +44,7 @@
   "directories": {
     "components": "components"
   },
+  "keywords": ["framework", "CSS", "SASS", "SCSS", "design"],
   "eslintConfig": {
     "extends": [
       "react-app",
