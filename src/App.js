@@ -1,5 +1,5 @@
 import './App.scss'
-import { Grid, Button, ButtonGroup } from './components'
+import { Grid, Button, ButtonGroup, List } from './components'
 
 function App() {
   return (
@@ -34,13 +34,12 @@ function App() {
       </Grid>
       <Grid areColumns>
         <Grid colSize="3">
-          <p>Por número</p>
-        </Grid>
-        <Grid tabletSize="8">
-          <p>Por número</p>
-        </Grid>
-        <Grid colSize="1" tabletSize="1">
-          <p>Sólo grid</p>
+          <List tag="aside" isGroup>
+            <p>Hola</p>
+            <p>Que hay</p>
+            <a href="#hello">Algo de enlace</a>
+            <p>el hijo</p>
+          </List>
         </Grid>
       </Grid>
       <Grid areColumns>
